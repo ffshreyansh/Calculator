@@ -22,11 +22,11 @@
             <button onclick="display('4')">4</button>
             <button onclick="display('5')">5</button>
             <button onclick="display('6')">6</button>
-            <button onclick="display('-')">+</button>
+            <button onclick="display('+')">+</button>
             <button onclick="display('1')">1</button>
             <button onclick="display('2')">2</button>
             <button onclick="display('3')">3</button>
-            <button onclick="display('+')">-</button>
+            <button onclick="display('-')">-</button>
             
             <button onclick="display('.')">.</button>
             
@@ -36,5 +36,28 @@
             
         </div>
     </div>
+
+    <script>
+        let outputscreen = document.getElementById("outputscreen")
+        function display(num){
+            outputscreen.value += num
+        }
+        function Calculate(){
+            try{
+                outputscreen.value = eval
+                (outputscreen.value);
+            }
+            
+            catch(err){
+                alert("Invalid")
+            }
+        }
+        function clear(){
+            outputscreen.value = "";
+        }
+        function del(){
+            outputscreen.value = outputscreen.value.slice(0,-1);
+        }
+    </script>
 </body>
 </html>
